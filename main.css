@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-right: 10px;
+  }
+  
+  /* Применяем адаптивные стили с помощью медиа-запросов */
+  @media (min-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+    }
+  
+    .box {
+      width: calc(33.33% - 10px); /* Устанавливаем ширину карточки для экранов с шириной 768px и более */
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .box {
+      background-color: blue; /* Изменяем цвет карточек для экранов с шириной 992px и более */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .box {
+      width: calc(25% - 10px); /* Устанавливаем ширину карточки для экранов с шириной 1200px и более */
+    }
+  }
+  
